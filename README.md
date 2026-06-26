@@ -14,7 +14,9 @@ A research codebase that grew across five iterations:
 
 ## Dataset
 - Download the PredictGBM dataset below:
-- https://huggingface.co/datasets/LZimmer/PREDICT-GBM/tree/main
+  https://huggingface.co/datasets/LZimmer/PREDICT-GBM/tree/main
+  We extract **T1Gd,**, **CSF** (cerebrospinal fluid mask), **Wm** (White Matter Mask), **Gm** (Gray Matter Mask) from this dataset.
+- Future work will revolve around synthetically generating data from a VTU Mesh Geometry
 
 ## Install
 
