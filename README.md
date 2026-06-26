@@ -12,6 +12,10 @@ A research codebase that grew across five iterations:
 - bf16 mixed precision (the Neural ODE solvers stay fp32 internally for stability).
 - No DDP / multi-GPU support yet.
 
+## Dataset
+- Download the PredictGBM dataset below:
+- https://huggingface.co/datasets/LZimmer/PREDICT-GBM/tree/main
+
 ## Install
 
 ```bash
