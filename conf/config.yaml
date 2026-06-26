@@ -1,0 +1,23 @@
+defaults:
+  - model: glio_ode
+  - data: brats
+  - _self_
+
+training:
+  device: cuda
+  lr: 1.0e-4
+  weight_decay: 1.0e-2
+  batch_size: 2
+  total_iters: 250000
+  ema_decay: 0.9999
+  amp: true
+  grad_clip: 1.0
+  log_every: 50
+  val_every: 1000
+  log_dir: runs/glio_ode
+  ckpt_dir: ckpt/glio_ode
+  resume: null
+
+diffusion:
+  image_weight: 1.0
+  mask_weight: 1.0

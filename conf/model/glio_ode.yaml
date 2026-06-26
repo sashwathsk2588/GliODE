@@ -1,0 +1,21 @@
+# Default GlioODE hyperparameters; consumed by hydra.utils.instantiate.
+_target_: networks.models.glio_ode.glio_ode.GlioODE
+crop_size: [64, 128, 128]
+in_channels: 4
+num_classes: 4
+patch_size: [4, 4, 4]
+d_model: 384
+num_heads: 6
+mlp_ratio: 4.0
+ode_t: 1.0
+ode_steps: 8
+ode_method: rk4
+decoder_channels: [384, 192, 96, 48]
+diffusion_timesteps: 1000
+deep_supervision: false
+eval_sampler: ddim
+eval_num_steps: 50
+eval_overlap: 0.5
+eval_sw_batch_size: 1
+attn_backend: auto
+# rope_dims left to default (anisotropic split of head_dim)

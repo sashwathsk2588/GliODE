@@ -1,0 +1,27 @@
+defaults:
+  - model: glio_forecast
+  - data: gliomasolver
+  - _self_
+
+training:
+  device: cuda
+  lr: 1.0e-4
+  weight_decay: 1.0e-2
+  batch_size: 1
+  total_iters: 250000
+  ema_decay: 0.9999
+  amp: true
+  grad_clip: 1.0
+  log_every: 50
+  val_every: 1000
+  log_dir: runs/glio_forecast
+  ckpt_dir: ckpt/glio_forecast
+  resume: null
+  val_num_samples: 4
+  val_forecast_horizon: 365.0
+  val_dice_threshold: 0.1
+
+diffusion:
+  diff_weight: 1.0
+  recon_weight: 1.0
+  recon_warmup_iters: 5000

@@ -1,0 +1,26 @@
+_target_: networks.models.glio_forecast.glio_forecast.GlioForecast
+crop_size: [64, 128, 128]
+anatomy_channels: 4
+observed_channels: 1
+param_channels: 3
+patch_size: [4, 4, 4]
+d_model: 384
+num_heads: 6
+mlp_ratio: 4.0
+ode_t: 1.0
+ode_steps: 8
+ode_method: rk4
+decoder_channels: [384, 192, 96, 48]
+diffusion_timesteps: 1000
+fk_voxel_size: [1.0, 1.0, 1.0]
+fk_use_residual: true
+fk_residual_channels: 16
+fk_ode_steps: 8
+fk_seed_max: 0.1
+fk_d_max: 1.0
+fk_rho_max: 1.0
+eval_sampler: ddim
+eval_num_steps: 50
+eval_overlap: 0.5
+eval_sw_batch_size: 1
+attn_backend: auto

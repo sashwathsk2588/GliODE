@@ -1,0 +1,10 @@
+root: ${oc.env:BRATS_ROOT,/data/brats}
+val_fraction: 0.1
+num_workers: 4
+modality_patterns:
+  t1: "*t1.nii.gz"
+  t1ce: "*t1ce.nii.gz"
+  t2: "*t2.nii.gz"
+  flair: "*flair.nii.gz"
+label_pattern: "*seg.nii.gz"
+remap_label_4_to_3: true
