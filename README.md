@@ -31,21 +31,6 @@ pip install flash-attn --no-build-isolation
 
 If `flash-attn` isn't installed, the model falls back to PyTorch's SDPA — slower but functionally identical.
 
-## Quickstart — train the segmentation model (GlioODE)
-
-```bash
-# Drop BraTS-style cases under $BRATS_ROOT/case_XXX/ with t1, t1ce, t2, flair, seg .nii.gz files.
-export BRATS_ROOT=/data/brats
-python train.py
-```
-
-## Quickstart — train the forecast model (GlioForecast)
-
-```bash
-# Drop GliomaSolver-style cases under $GLIOMASOLVER_ROOT/case_XXX/ with t1gd, gm, wm, csf .nii.gz files.
-export GLIOMASOLVER_ROOT=/data/gliomasolver
-python train_forecast.py
-```
 
 Hydra overrides:
 
