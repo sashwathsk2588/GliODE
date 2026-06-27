@@ -74,15 +74,3 @@ Outputs:
 pytest -q
 # Expected: 97 passed.
 ```
-
-## Repo map
-
-- `networks/models/glio_ode/` — iter-1/2/3: PatchEmbed3D, ViT trunk, Neural ODE, UNETR decoder, RoPE/MHSA3D, diffusion wrapper.
-- `networks/models/glio_forecast/` — iter-4: encoder composition + FK decoder + forecast diffusion.
-- `networks/data/` — BraTS (iter-2) and GliomaSolver (iter-4) loaders.
-- `networks/training/` — EMA, train-one-iter, validate, checkpoint helpers.
-- `conf/` — Hydra configs (`config.yaml` for segmentation, `config_forecast.yaml` for forecasting).
-- `train.py` — segmentation training entry point.
-- `train_forecast.py` — forecasting training entry point.
-- `forecast.py` — inference CLI (added in iter-6).
-- `docs/superpowers/specs/`, `docs/superpowers/plans/` — design and implementation history.
